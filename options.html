@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="optionsPageTitle">Clean Link Sharer – Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top-inner">
+        <svg class="logo" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true" focusable="false">
+          <rect width="24" height="24" rx="6.5" fill="var(--brand)" />
+          <g fill="none" stroke="#fff" stroke-width="2" transform="rotate(-45 12 12)">
+            <rect x="4" y="9.5" width="8.5" height="5" rx="2.5" />
+            <rect x="11.5" y="9.5" width="8.5" height="5" rx="2.5" />
+          </g>
+          <path d="M18.2 3.2l.6 1.5 1.5.6-1.5.6-.6 1.5-.6-1.5-1.5-.6 1.5-.6z" fill="#fff" />
+        </svg>
+        <div class="titles">
+          <span class="product">Clean Link Sharer</span>
+          <h1 data-i18n="optionsHeading">Settings</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap content">
+      <section class="card" aria-labelledby="h-cleaning">
+        <h2 id="h-cleaning" data-i18n="sectionCleaning">Cleaning</h2>
+
+        <label class="toggle-row" for="unwrap-toggle">
+          <span data-i18n="optUnwrap">Unwrap known redirect links</span>
+          <input type="checkbox" id="unwrap-toggle" class="switch" />
+        </label>
+
+        <label class="toggle-row" for="autocopy-toggle">
+          <span data-i18n="optAutoCopy">Copy the clean link automatically when I open the popup</span>
+          <input type="checkbox" id="autocopy-toggle" class="switch" />
+        </label>
+
+        <div class="field">
+          <label for="extra-params" data-i18n="optExtraLabel">Always strip these extra parameters</label>
+          <textarea id="extra-params" rows="3" spellcheck="false" autocomplete="off" data-i18n-placeholder="optExtraPlaceholder" placeholder="ref, s, foo_id"></textarea>
+        </div>
+
+        <div class="save-row">
+          <button type="button" id="save-btn" class="btn btn-primary" data-i18n="btnSave">Save</button>
+          <span id="status" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="card" aria-labelledby="h-shortcut">
+          <h2 id="h-shortcut" class="icon-h icon-key" data-i18n="optShortcutHeading">Keyboard shortcut</h2>
+          <p class="desc" data-i18n="optShortcutText">Alt+Shift+C copies a clean link to the current page.</p>
+          <div class="btn-row">
+            <button type="button" id="shortcut-btn" class="btn" data-i18n="btnChangeShortcut">Change shortcut</button>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="h-backup">
+          <h2 id="h-backup" class="icon-h icon-box" data-i18n="optBackupHeading">Back up or move your settings</h2>
+          <div class="btn-row">
+            <button type="button" id="export-btn" class="btn btn-export" data-i18n="btnExport">Export settings</button>
+            <button type="button" id="import-btn" class="btn btn-import" data-i18n="btnImport">Import settings</button>
+          </div>
+          <input type="file" id="import-file" accept=".json,application/json" hidden />
+        </section>
+      </div>
+
+      <p class="privacy" data-i18n="optPrivacyNote">Everything happens locally in your browser.</p>
+    </main>
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

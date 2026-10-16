@@ -1,0 +1,48 @@
+{
+  "extName": { "message": "Clean Link Sharer", "description": "Tilläggets namn" },
+  "extDescription": {
+    "message": "Ta bort spårning (UTM, fbclid, gclid …) från länkar innan du delar dem. Ett klick, och inget lämnar din webbläsare.",
+    "description": "Beskrivning i butiken (max 132 tecken)"
+  },
+  "actionTitle": { "message": "Kopiera en ren länk", "description": "Tooltip på verktygsfältsknappen" },
+  "cmdCopyClean": { "message": "Kopiera en ren länk till den här sidan", "description": "Beskrivning av kortkommandot" },
+
+  "menuCopyLink": { "message": "Kopiera ren länk", "description": "Menyval i högerklicksmenyn på en länk" },
+  "menuCopyPage": { "message": "Kopiera ren länk till den här sidan", "description": "Menyval i högerklicksmenyn på en sida" },
+
+  "popupTitle": { "message": "Clean Link Sharer" },
+  "btnCopy": { "message": "Kopiera" },
+  "btnShare": { "message": "Dela" },
+  "btnOpen": { "message": "Öppna" },
+  "btnSettings": { "message": "Inställningar" },
+  "statusCopied": { "message": "Kopierat!" },
+  "statusAutoCopied": { "message": "Kopierades automatiskt" },
+  "statusAlreadyClean": { "message": "Länken var redan ren." },
+  "statusNoUrl": { "message": "Kunde inte läsa länken på den här sidan. Interna sidor som chrome:// kan inte rensas." },
+  "statusCopyFailed": { "message": "Kunde inte kopiera. Markera texten och kopiera själv." },
+  "removedOne": { "message": "Tog bort 1 parameter" },
+  "removedMany": {
+    "message": "Tog bort $COUNT$ parametrar",
+    "placeholders": { "count": { "content": "$1", "example": "3" } }
+  },
+  "unwrappedNote": { "message": "Omdirigeringslänk uppackad" },
+
+  "optionsPageTitle": { "message": "Clean Link Sharer – Inställningar" },
+  "optionsHeading": { "message": "Inställningar" },
+  "sectionCleaning": { "message": "Rensning" },
+  "optUnwrap": { "message": "Packa upp kända omdirigeringslänkar (Facebook, Google, YouTube, Reddit …)" },
+  "optAutoCopy": { "message": "Kopiera den rena länken automatiskt när jag öppnar popupen" },
+  "optExtraLabel": { "message": "Ta alltid bort dessa extra parametrar (kommaseparerade)" },
+  "optExtraPlaceholder": { "message": "ref, s, foo_id" },
+  "btnSave": { "message": "Spara" },
+  "statusSaved": { "message": "Sparat!" },
+  "optShortcutHeading": { "message": "Kortkommando" },
+  "optShortcutText": { "message": "Alt+Shift+C kopierar en ren länk till den aktuella sidan. Du kan ändra det i Chromes genvägsinställningar." },
+  "btnChangeShortcut": { "message": "Ändra kortkommando" },
+  "optBackupHeading": { "message": "Säkerhetskopiera eller flytta dina inställningar" },
+  "btnExport": { "message": "Exportera inställningar" },
+  "btnImport": { "message": "Importera inställningar" },
+  "statusImported": { "message": "Inställningarna importerades." },
+  "statusImportFailed": { "message": "Filen är inte en giltig inställningsfil." },
+  "optPrivacyNote": { "message": "Allt sker lokalt i din webbläsare. Ingen data samlas in eller skickas någonstans." }
+}

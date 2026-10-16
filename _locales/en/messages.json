@@ -1,0 +1,48 @@
+{
+  "extName": { "message": "Clean Link Sharer", "description": "Extension name" },
+  "extDescription": {
+    "message": "Remove tracking (UTM, fbclid, gclid …) from links before you share them. One click, nothing leaves your browser.",
+    "description": "Extension description shown in the store (max 132 characters)"
+  },
+  "actionTitle": { "message": "Copy a clean link", "description": "Toolbar button tooltip" },
+  "cmdCopyClean": { "message": "Copy a clean link to the current page", "description": "Keyboard shortcut description" },
+
+  "menuCopyLink": { "message": "Copy clean link", "description": "Context menu item on a link" },
+  "menuCopyPage": { "message": "Copy clean link to this page", "description": "Context menu item on a page" },
+
+  "popupTitle": { "message": "Clean Link Sharer" },
+  "btnCopy": { "message": "Copy" },
+  "btnShare": { "message": "Share" },
+  "btnOpen": { "message": "Open" },
+  "btnSettings": { "message": "Settings" },
+  "statusCopied": { "message": "Copied!" },
+  "statusAutoCopied": { "message": "Copied automatically" },
+  "statusAlreadyClean": { "message": "This link was already clean." },
+  "statusNoUrl": { "message": "Couldn't read the link on this page. Internal pages such as chrome:// can't be cleaned." },
+  "statusCopyFailed": { "message": "Couldn't copy. Select the text and copy it manually." },
+  "removedOne": { "message": "Removed 1 parameter" },
+  "removedMany": {
+    "message": "Removed $COUNT$ parameters",
+    "placeholders": { "count": { "content": "$1", "example": "3" } }
+  },
+  "unwrappedNote": { "message": "Redirect link unwrapped" },
+
+  "optionsPageTitle": { "message": "Clean Link Sharer – Settings" },
+  "optionsHeading": { "message": "Settings" },
+  "sectionCleaning": { "message": "Cleaning" },
+  "optUnwrap": { "message": "Unwrap known redirect links (Facebook, Google, YouTube, Reddit …)" },
+  "optAutoCopy": { "message": "Copy the clean link automatically when I open the popup" },
+  "optExtraLabel": { "message": "Always strip these extra parameters (comma-separated)" },
+  "optExtraPlaceholder": { "message": "ref, s, foo_id" },
+  "btnSave": { "message": "Save" },
+  "statusSaved": { "message": "Saved!" },
+  "optShortcutHeading": { "message": "Keyboard shortcut" },
+  "optShortcutText": { "message": "Alt+Shift+C copies a clean link to the current page. You can change it in Chrome's shortcut settings." },
+  "btnChangeShortcut": { "message": "Change shortcut" },
+  "optBackupHeading": { "message": "Back up or move your settings" },
+  "btnExport": { "message": "Export settings" },
+  "btnImport": { "message": "Import settings" },
+  "statusImported": { "message": "Settings imported." },
+  "statusImportFailed": { "message": "That file isn't a valid settings file." },
+  "optPrivacyNote": { "message": "Everything happens locally in your browser. No data is collected or sent anywhere." }
+}
