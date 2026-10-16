@@ -124,3 +124,27 @@ test('nested redirect wrappers are followed up to a limit', () => {
   const result = cleanUrl(`https://www.google.com/url?q=${middle}`);
   assert.equal(result.cleaned, 'https://example.com/final');
 });
+
+test('doubleclick social ad click unwraps to the destination', () => {
+  const result = cleanUrl(
+    'https://ad.doubleclick.net/ddm/socialclk?ds_aid=700000002627381&ds_e_ca_id=6858860481411&ds_e_ag_id=6943881823811&ds_e_ad_id=6950993148011&ds_e_ca_name=FB_SE_Ancestry_FH_BAU_Prospecting-Sales&ds_e_ag_name=SE_ASC_CountryTargeting&ds_e_ad_name=prospecting-fh-bau-UGC-cristi-hints-freetrial&ds_sig=rW1ET-II94sl2A&ds_dest_url=https%3A%2F%2Fwww.ancestry.se%2Ft101990%2Frd.ashx%3Fancid%3Diduu961y79',
+  );
+  assert.equal(result.cleaned, 'https://www.ancestry.se/t101990/rd.ashx?ancid=iduu961y79');
+  assert.equal(result.unwrapped, true);
+});
+
+test('google ad click wrappers unwrap to the adurl and drop tracking on it', () => {
+  assert.equal(
+    clean('https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjs&sig=abc&adurl=https%3A%2F%2Fexample.com%2Fshop%3Futm_source%3Dgoogle%26gclid%3D1'),
+    'https://example.com/shop',
+  );
+  assert.equal(
+    clean('https://www.googleadservices.com/pagead/aclk?sa=L&ai=abc&sig=def&adurl=https%3A%2F%2Fexample.com%2F'),
+    'https://example.com/',
+  );
+});
+
+test('doubleclick on other paths is left alone', () => {
+  const url = 'https://ad.doubleclick.net/ddm/other?x=1';
+  assert.equal(clean(url), url);
+});
