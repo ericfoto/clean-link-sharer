@@ -23,10 +23,10 @@ HOW IT WORKS
 • Press Alt+Shift+C to copy a clean link to the current page instantly (you can change the shortcut).
 
 WHAT IT CLEANS
-• Campaign and ad tracking: utm_*, fbclid, gclid, msclkid, twclid, ttclid, mc_eid and many more.
-• Site-specific tracking on Amazon, YouTube, Spotify, Instagram, TikTok, LinkedIn, Reddit, X/Twitter, Facebook, eBay, AliExpress, Netflix, Apple and Google/Bing search.
-• Redirect wrappers, such as links that go through Facebook, Google, YouTube or Reddit first, are unwrapped to the real destination.
-• Parameters that sites need to work (for example the video ID on YouTube or the search query on Google) are kept.
+• Campaign and ad tracking parameters, such as UTM tags and click IDs.
+• Extra tracking that popular shopping, video and social sites add to their links.
+• Redirect and ad-click links, which are unwrapped to the real destination.
+• Parameters that a page needs to work, such as a video ID or your search query, are kept.
 
 YOUR CONTROL
 • Add your own parameters to always remove.
@@ -50,10 +50,10 @@ SÅ FUNGERAR DET
 • Tryck Alt+Shift+C för att direkt kopiera en ren länk till den aktuella sidan (du kan ändra kortkommandot).
 
 VAD SOM RENSAS
-• Kampanj- och annonsspårning: utm_*, fbclid, gclid, msclkid, twclid, ttclid, mc_eid och många fler.
-• Sajtspecifik spårning på Amazon, YouTube, Spotify, Instagram, TikTok, LinkedIn, Reddit, X/Twitter, Facebook, eBay, AliExpress, Netflix, Apple samt Google- och Bing-sök.
-• Omdirigeringslänkar, till exempel länkar som går via Facebook, Google, YouTube eller Reddit, packas upp till den riktiga adressen.
-• Parametrar som sidor behöver för att fungera (till exempel video-ID på YouTube eller söktexten på Google) behålls.
+• Kampanj- och annonsspårning, till exempel UTM-taggar och klick-ID:n.
+• Extra spårning som populära shopping-, video- och sociala sajter lägger på sina länkar.
+• Omdirigeringslänkar och annonsklick packas upp till den riktiga adressen.
+• Parametrar som en sida behöver för att fungera, som ett video-ID eller din sökning, behålls.
 
 DU BESTÄMMER
 • Lägg till egna parametrar som alltid ska tas bort.

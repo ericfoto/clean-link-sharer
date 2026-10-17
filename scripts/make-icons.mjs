@@ -113,10 +113,29 @@ function encodePng(size, rgba) {
   ]);
 }
 
-const outDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'icons');
+// Web Store icon: 128x128 canvas, 96x96 artwork centred, 16px transparent margin.
+function renderStoreIcon() {
+  const canvas = 128;
+  const artwork = 96;
+  const margin = (canvas - artwork) / 2;
+  const art = render(artwork);
+  const pixels = Buffer.alloc(canvas * canvas * 4);
+  for (let y = 0; y < artwork; y += 1) {
+    art.copy(pixels, ((y + margin) * canvas + margin) * 4, y * artwork * 4, (y + 1) * artwork * 4);
+  }
+  return encodePng(canvas, pixels);
+}
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const outDir = join(root, 'icons');
 mkdirSync(outDir, { recursive: true });
 for (const size of SIZES) {
   const file = join(outDir, `icon-${size}.png`);
   writeFileSync(file, encodePng(size, render(size)));
   console.log(`wrote ${file}`);
 }
+
+const storeIconFile = join(root, 'store', 'store-icon-128.png');
+mkdirSync(dirname(storeIconFile), { recursive: true });
+writeFileSync(storeIconFile, renderStoreIcon());
+console.log(`wrote ${storeIconFile}`);
